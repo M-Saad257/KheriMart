@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./src/assets/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>KheriMart | Culture You Can Wear, Pride You Can Feel</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <audio id="bg-music" src="./src/assets/Bg-Song.mp3" autoplay muted loop></audio>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const audio = document.getElementById("bg-music");
+    document.addEventListener('click', () => {
+      audio.muted = false;
+      audio.play().catch(err => console.log("Playback Prevented",err));
+    });
+  </script>
+</body>
+
+</html>

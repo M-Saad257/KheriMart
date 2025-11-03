@@ -1,29 +1,12 @@
-🛍️ KheriMart – MERN Stack E-Commerce Platform
+# React + Vite
 
-KheriMart is a modern, full-stack e-commerce web application built with the MERN stack (MongoDB, Express, React, Node.js).
-It allows users to browse and purchase traditional Pakistani footwear like Peshawari chappals and Kheris with a smooth shopping experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🚀 Features
+Currently, two official plugins are available:
 
-User authentication (Register/Login with JWT)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Admin dashboard for product management
+## Expanding the ESLint configuration
 
-Product listing with images, sale price, and discounts
-
-Real-time updates for likes, comments, and reviews
-
-Profile photo upload and edit options
-
-Responsive UI built with React + Tailwind CSS
-
-RESTful APIs using Express and MongoDB
-
-Deployment: Vercel (frontend) + Render (backend)
-
-💡 Tech Stack
-
-Frontend: React, Vite, Tailwind CSS
-Backend: Node.js, Express.js, MongoDB, Mongoose
-Storage: Multer for image uploads
-Authentication: JSON Web Token (JWT)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
