@@ -1,12 +1,48 @@
-# React + Vite
+# 🛍️ KheriMart – MERN Stack E-Commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KheriMart** is a full-stack e-commerce web application built with the **MERN stack (MongoDB, Express.js, React, and Node.js)**.  
+It showcases and sells traditional Pakistani footwear such as *Peshawari chappals* and *Kheris*, blending cultural heritage with modern web technology.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔐 **User Authentication** – Secure login and registration with JWT  
+- 🛒 **Product Management** – Admins can add, edit, and delete products easily  
+- 💰 **Dynamic Pricing** – Auto-calculates sale prices based on discounts  
+- 💬 **Real-Time Interactions** – Live likes and comments using Socket.IO  
+- 🖼️ **Product Gallery** – Multiple images with zoom-on-hover effect  
+- 📱 **Responsive UI** – Optimized for all screen sizes using React + Tailwind CSS  
+- ⚡ **RESTful API** – Built with Express.js and MongoDB for efficient data handling  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Tech Stack
+
+**Frontend:**  
+- React  
+- Vite  
+- Tailwind CSS  
+
+**Backend:**  
+- Node.js  
+- Express.js  
+- MongoDB  
+- Mongoose  
+
+**Additional Tools:**  
+- Socket.IO (real-time functionality)  
+- Multer (image uploads)  
+
+## 🧠 Overview
+
+KheriMart provides a seamless shopping experience for users and a powerful admin dashboard for product management.  
+It’s designed to combine traditional Pakistani craftsmanship with the convenience and efficiency of a modern online store.
+
+## 🧑‍💻 Author
+
+**Developed by:** Saad  
+**Project:** KheriMart – MERN Stack E-Commerce Platform  
+**Purpose:** Learning & showcasing full-stack development skills
+
+**-------------------------------------------------------------------------------------------------------------------------------------------------------------**
