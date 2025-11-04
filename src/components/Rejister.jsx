@@ -213,6 +213,7 @@ const countryCityData = {
           <div className="col-span-2 md:col-span-1">
             <label className="block text-sm font-medium text-gray-700">Phone</label>
             <input
+              maxLength={11}
               type="tel"
               {...register("phone", { required: "Phone number is required" })}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500"
