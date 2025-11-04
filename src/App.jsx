@@ -136,26 +136,37 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const checkServerBoot = async () => {
-      if (!user) return;
-      try {
-        const res = await fetch("http://localhost:5000/server-boot");
-        const data = await res.json();
-        const previousBootId = localStorage.getItem("serverBootId");
-        const currentBootId = String(data.bootId);
-        if (!previousBootId) {
-          localStorage.setItem("serverBootId", currentBootId);
-        } else if (previousBootId !== currentBootId) {
-          alert("⚠️ Server restarted. You have been logged out.");
-          localStorage.clear();
-          window.location.href = "/";
-        }
-      } catch (err) {
-        console.error("🛑 Server boot check failed:", err);
+  const checkServerBoot = async () => {
+    if (!user || !user._id) return; // Only run if user is logged in
+
+    try {
+      const res = await fetch("http://localhost:5000/server-boot");
+      const data = await res.json();
+      const currentBootId = String(data.bootId);
+      const previousBootId = localStorage.getItem("serverBootId");
+
+      // If there’s no previous ID, store it (first login) — no logout
+      if (!previousBootId) {
+        localStorage.setItem("serverBootId", currentBootId);
+        return;
       }
-    };
-    checkServerBoot();
-  }, [user]);
+
+      // If they differ, it means server was restarted
+      if (previousBootId !== currentBootId) {
+        alert("⚠️ Server restarted. You have been logged out.");
+        localStorage.clear();
+        window.location.href = "/";
+      }
+    } catch (err) {
+      console.error("🛑 Server boot check failed:", err);
+    }
+  };
+
+  // Delay check slightly to ensure login process has updated localStorage
+  const timeout = setTimeout(() => checkServerBoot(), 500);
+  return () => clearTimeout(timeout);
+}, [user]);
+
 
   const handleAddToCart = async (product) => {
     setCartItems((prev) => {
