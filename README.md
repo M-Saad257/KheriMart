@@ -45,4 +45,4 @@ It’s designed to combine traditional Pakistani craftsmanship with the convenie
 **Project:** KheriMart – MERN Stack E-Commerce Platform  
 **Purpose:** Learning & showcasing full-stack development skills
 
-**-------------------------------------------------------------------------------------------------------------------------------------------------------------**
+**--------------------------------------------------------------------------------------------------------------------------**
