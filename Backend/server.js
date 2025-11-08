@@ -51,7 +51,7 @@ app.use('/api/checkout', checkoutRoutes);
 app.use('/api/orders', orderRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/KheriMart', {
+mongoose.connect('mongodb+srv://saadTheProcoder:redmi-15c@saad.py1o9yb.mongodb.net/?appName=Saad/KheriMart', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('✅ DB Connected'))
