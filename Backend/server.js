@@ -4,7 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
+import 'dotenv/config';
 // Routes
 import authRoutes from './routes/rejister.js';
 import usersRoutes from './routes/users.js';
@@ -50,8 +50,10 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/checkout', checkoutRoutes);
 app.use('/api/orders', orderRoutes);
 
+const MONGO_URI = process.env.CONNECTION_STRING;
+
 // MongoDB connection
-mongoose.connect('mongodb+srv://saadTheProcoder:redmi-15c@saad.py1o9yb.mongodb.net/?appName=Saad/KheriMart', {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('✅ DB Connected'))
