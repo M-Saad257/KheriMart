@@ -20,12 +20,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-
+const allowedOrigin = process.env.CLIENT_ORIGIN_URL || 'http://localhost:5173';
 // CORS setup
 app.use(cors({
-  origin: 'http://localhost:5173', // React dev URL
+  origin: allowedOrigin, // React dev URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type']
+  allowedHeaders: ['Content-Type'],
+  **credentials: true**
 }));
 
 // Static uploads folder
